@@ -34,7 +34,13 @@
                         case 'attributes':
                             const attributeName = record.attributeName;
                             const attributeValue = target.getAttribute(attributeName);
-                            console.log(`.[node-id=${id}].${ts - mark}.${attributeName}="${attributeValue}"`);
+                            if (attributeName === 'style') {
+                                // find opacity
+                                const opacityValue = attributeValue.match(/opacity\:\s([0-9.]+);$/)?.[1];
+                                if (opacityValue) {
+                                    console.log(`${id},${ts - mark},${opacityValue}`);
+                                }
+                            }
                             break;
 
                     }
