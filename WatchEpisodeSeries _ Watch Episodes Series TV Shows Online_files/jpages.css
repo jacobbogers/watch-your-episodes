@@ -1,0 +1,140 @@
+.latestReviews {
+	margin: 15px 0;
+}
+
+.latestReviews a {
+	font-size: 12px;
+	cursor: pointer;
+	margin: 0 5px;
+	color: #333;
+}
+
+.latestReviews a:hover {
+	background-color: #222;
+	color: #fff;
+}
+
+.latestReviews a.jp-previous { margin-right: 15px; }
+.latestReviews a.jp-next { margin-left: 15px; }
+
+.latestReviews a.jp-current, a.jp-current:hover { 
+	color: #01abe9;
+	font-weight: bold;
+}
+
+.latestReviews a.jp-disabled, a.jp-disabled:hover {
+	color: #bbb;
+}
+
+.latestReviews a.jp-current, a.jp-current:hover,
+.latestReviews a.jp-disabled, a.jp-disabled:hover {
+	cursor: default; 
+	background: none;
+}
+
+.latestReviews span { margin: 0 5px; }
+
+
+
+
+
+
+
+.episodeReviewsHolder {
+	margin: 15px 0;
+}
+
+.episodeReviewsHolder a {
+	font-size: 12px;
+	cursor: pointer;
+	margin: 0 5px;
+	color: #333;
+}
+
+.episodeReviewsHolder a:hover {
+	background-color: #222;
+	color: #fff;
+}
+
+.episodeReviewsHolder a.jp-previous { margin-right: 15px; }
+.episodeReviewsHolder a.jp-next { margin-left: 15px; }
+
+.episodeReviewsHolder a.jp-current, a.jp-current:hover {
+	color: #01abe9;
+	font-weight: bold;
+}
+
+.episodeReviewsHolder a.jp-disabled, a.jp-disabled:hover {
+	color: #bbb;
+}
+
+.episodeReviewsHolder a.jp-current, a.jp-current:hover,
+.episodeReviewsHolder a.jp-disabled, a.jp-disabled:hover {
+	cursor: default;
+	background: none;
+}
+
+.episodeReviewsHolder span { margin: 0 5px; }
+
+
+
+
+
+
+
+.seriesReviewsHolder {
+	margin: 15px 0;
+}
+
+.seriesReviewsHolder a {
+	font-size: 12px;
+	cursor: pointer;
+	margin: 0 5px;
+	color: #333;
+}
+
+.seriesReviewsHolder a:hover {
+	background-color: #222;
+	color: #fff;
+}
+
+.seriesReviewsHolder a.jp-previous { margin-right: 15px; }
+.seriesReviewsHolder a.jp-next { margin-left: 15px; }
+
+.seriesReviewsHolder a.jp-current, a.jp-current:hover {
+	color: #01abe9;
+	font-weight: bold;
+}
+
+.seriesReviewsHolder a.jp-disabled, a.jp-disabled:hover {
+	color: #bbb;
+}
+
+.seriesReviewsHolder a.jp-current, a.jp-current:hover,
+.seriesReviewsHolder a.jp-disabled, a.jp-disabled:hover {
+	cursor: default;
+	background: none;
+}
+
+.seriesReviewsHolder span { margin: 0 5px; }
+
+/*
+     FILE ARCHIVED ON 22:56:53 May 19, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:01:20 Mar 18, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 116.165
+  exclusion.robots: 0.069
+  exclusion.robots.policy: 0.058
+  RedisCDXSource: 0.675
+  esindex: 0.006
+  LoadShardBlock: 97.117 (3)
+  PetaboxLoader3.datanode: 200.261 (5)
+  load_resource: 310.967 (2)
+  PetaboxLoader3.resolve: 143.644 (2)
+*/
