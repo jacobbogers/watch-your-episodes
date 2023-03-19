@@ -16,6 +16,9 @@
             count = 0;
             const elts = document.querySelectorAll(cssQuery);
             const mo = new MutationObserver((records, observer) => {
+                const beginOfThisDay = new Date();
+                const mark = beginOfThisDay.setHours(0, 0, 0, 0).valueOf();
+                const ts = Date.now();
                 records.forEach((record) => {
                     const { target } = record;
                     const className = target.getAttribute('class');
@@ -23,20 +26,18 @@
                     if (id === undefined || id === null) {
                         target.setAttribute('data-id', `${++count}`);
                     }
-                    console.log(`%c BEGIN This is target: ${className}/${id}`, 'color:green');
                     switch (record.type) {
                         case "childList":
-                            console.log('/records/childList/addedNodes:', Array.from(record.addedNodes.entries().length));
+                            console.log('records/childList/addedNodes:', Array.from(record.addedNodes.entries().length));
                             console.log('/records/childList/removedNodes:', Array.from(record.removedNodes.entries().length));
                             break;
                         case 'attributes':
                             const attributeName = record.attributeName;
                             const attributeValue = target.getAttribute(attributeName);
-                            console.log(`/records/attributes/name/${attributeName}/${record.oldValue}->${attributeValue}`);
+                            console.log(`.[node-id=${id}].${ts - mark}.${attributeName}="${attributeValue}"`);
                             break;
 
                     }
-                    console.log(`%c END This is target: ${className}/${id}`, 'color:red');
                 });
 
                 return mo;
