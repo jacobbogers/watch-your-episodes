@@ -1,0 +1,42 @@
+*,
+input,
+select {
+    box-sizing: border-box;
+}
+
+html {
+    /* some resets */
+    height: 100vh;
+    width: 100vw;
+    text-size-adjust: 100%;
+}
+
+body {
+    /* some resets/presets */
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background: #15151c;
+    font-size: 12px;
+
+    /* colors and fonts */
+    font-family: MyriadPro, arial, sans-serif;
+    font-style: regular;
+    font-weight: 400;
+    color: #222;
+
+
+    /* layout and sizing */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* for this app */
+    min-width: 320px;
+}
+
+#root {
+    border: 4px red dashed;
+}
