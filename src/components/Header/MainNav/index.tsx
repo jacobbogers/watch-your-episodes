@@ -3,13 +3,13 @@ import styles from './main.nav.module.scss';
 
 export default function MainNav() {
     return (
-        <div className={styles.mainMenu}>
+        <nav className={styles.mainMenu}>
             <MainNavBtn>Home</MainNavBtn>
             <MainNavBtn>Browse Series</MainNavBtn>
             <MainNavBtn>New Series</MainNavBtn>
             <MainNavBtn>Popular Series</MainNavBtn>
             <MainNavBtn>Schedule</MainNavBtn>
             <MainNavBtn>Search</MainNavBtn>
-        </div>
+        </nav>
     );
 }
