@@ -1,21 +1,20 @@
 @font-face {
     font-family: MyriadPro;
-    src: url("/fonts/MyriadProLight.woff2") format('woff2');
+    src: url('/fonts/MyriadProLight.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'MyriadPro';
-    src: url("/fonts/MyriadProRegular.woff2") format('woff2');
+    src: url('/fonts/MyriadProRegular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MyriadPro';
-    src: url("/fonts/MyriadProSemibold.woff2") format('woff2');
+    src: url('/fonts/MyriadProSemibold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
 }

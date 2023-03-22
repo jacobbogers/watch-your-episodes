@@ -1,8 +1,11 @@
-
-import React from 'react';
-
 import styles from './App.module.scss';
 
-export default function App(){
-    return <div className={styles.app}>Hello world</div>;
+import Header from './components/Header';
+
+export default function App() {
+    return (
+        <div className={styles.app}>
+            <Header />
+        </div>
+    );
 }

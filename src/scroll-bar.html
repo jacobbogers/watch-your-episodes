@@ -1,151 +1,149 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="fonts/MyriadPro.css" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-<head>
-    <link rel="stylesheet" href="fonts/MyriadPro.css" />
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+            html {
+                /* some resets */
+                height: 100vh;
+                width: 100%;
+            }
 
-        html {
-            /* some resets */
-            height: 100vh;
-            width: 100%;
-        }
+            body {
+                /* some resets */
+                margin: 0;
+                height: 100vh;
+                width: 100vw;
 
-        body {
-            /* some resets */
-            margin: 0;
-            height: 100vh;
-            width: 100vw;
+                /* colors and fonts */
+                background: #15151c;
+                font-family: MyriadPro;
+                font-style: regular;
+                font-weight: thin;
+                color: #222;
+                font-size: 12px;
 
-            /* colors and fonts */
-            background: #15151c;
-            font-family: MyriadPro;
-            font-style: regular;
-            font-weight: thin;
-            color: #222;
-            font-size: 12px;
+                /* layout and sizing */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* for this app */
+                min-width: 320px;
+            }
 
-            /* layout and sizing */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* for this app */
-            min-width: 320px;
+            .rect {
+                width: 100px;
+                height: 100px;
+            }
 
-        }
+            .red {
+                background: rgba(255, 0, 0, 0.2);
+            }
 
-        .rect {
-            width: 100px;
-            height: 100px;
-        }
+            .green {
+                background: rgba(0, 255, 0, 0.2);
+            }
 
-        .red {
-            background: rgba(255, 0, 0, 0.2);
-        }
+            .blue {
+                background: rgba(0, 0, 255, 0.2);
+            }
 
-        .green {
-            background: rgba(0, 255, 0, 0.2);
-        }
+            .orange {
+                background: rgba(255, 165, 0, 0.2);
+            }
 
-        .blue {
-            background: rgba(0, 0, 255, 0.2);
-        }
+            #root {
+                height: 100%;
+                max-height: 300px;
+                width: 300px;
+            }
 
-        .orange {
-            background: rgba(255, 165, 0, 0.2);
-        }
+            .scroll-control {
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                position: relative;
+            }
 
-        #root {
-            height: 100%;
-            max-height: 300px;
-            width: 300px;
-        }
+            .scroll-content {
+                height: 100%;
+                scrollbar-width: none;
+                -webkit-overflow-scrolling: touch;
+                overflow: scroll;
+                overflow-x: hidden;
+            }
 
-        .scroll-control {
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            position: relative;
-        }
+            .invisible-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
 
-        .scroll-content {
-            height: 100%;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-            overflow: scroll;
-            overflow-x: hidden;
-        }
+            .pane {
+                background: rgba(137, 137, 137, 0.51);
+                position: absolute;
+                width: 6px;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                visibility: hidden;
+                /* Target only IE7 and IE8 with this hack */
+                opacity: 0.01;
+                transition: 0.3s;
+                border-radius: 3px;
+            }
 
-        .invisible-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
+            .slider {
+                background: rgba(137, 137, 137, 0.51);
+                position: relative;
+                margin: 0 0px;
+                opacity: 0.6;
+                cursor: pointer;
+                border-radius: 3px;
+            }
 
-        .pane {
-            background: rgba(137, 137, 137, 0.51);
-            position: absolute;
-            width: 6px;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            visibility: hidden;
-            /* Target only IE7 and IE8 with this hack */
-            opacity: .01;
-            transition: .3s;
-            border-radius: 3px;
-        }
+            .slider {
+                top: 50%;
+                height: 50px;
+            }
 
-        .slider {
-            background: rgba(137, 137, 137, 0.51);
-            position: relative;
-            margin: 0 0px;
-            opacity: 0.6;
-            cursor: pointer;
-            border-radius: 3px;
-        }
+            .scroll-control:hover > .pane {
+                visibility: visible;
+                /* Target only IE7 and IE8 with this hack */
+                opacity: 1;
+            }
 
-        .slider {
-            top: 50%;
-            height: 50px;
-        }
+            .mid-border-title:before {
+                width: 20px;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                bottom: 2px;
+                content: ' ';
+                background-color: #01abe9;
+                box-shadow: 0 0 4px 1px rgba(3, 167, 228, 0.65);
+            }
 
-        .scroll-control:hover>.pane {
-            visibility: visible;
-            /* Target only IE7 and IE8 with this hack */
-            opacity: 1;
-        }
+            .mid-border-title {
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+                font-size: 17px;
+                padding-bottom: 7px;
+                position: relative;
+                color: #fff;
+                letter-spacing: -0.7px;
+                font-style: regular;
+                font-weight: 300;
+            }
+        </style>
+    </head>
 
-        .mid-border-title:Before {
-            width: 20px;
-            height: 2px;
-            position: absolute;
-            left: 0;
-            bottom: 2px;
-            content: ' ';
-            background-color: #01abe9;
-            box-shadow: 0 0 4px 1px rgba(3, 167, 228, 0.65);
-        }
-
-        .mid-border-title {
-            width: 100%;
-            height: auto;
-            margin: 10px 0;
-            font-size: 17px;
-            padding-bottom: 7px;
-            position: relative;
-            color: #fff;
-            letter-spacing: -0.7px;
-            font-style: regular;
-            font-weight: 300;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="root">
-        <!--
+    <body>
+        <div id="root">
+            <!--
         <div class="scroll-control">
             <div class="pane">
                 <div class="slider"></div>
@@ -165,8 +163,7 @@
             </div>
         </div>
         -->
-        <div class="mid-border-title">Latest Reviews</div>
-    </div>
-</body>
-
+            <div class="mid-border-title">Latest Reviews</div>
+        </div>
+    </body>
 </html>

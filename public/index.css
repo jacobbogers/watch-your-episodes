@@ -24,10 +24,9 @@ body {
 
     /* colors and fonts */
     font-family: MyriadPro, arial, sans-serif;
-    font-style: regular;
+    font-style: normal;
     font-weight: 400;
     color: #222;
-
 
     /* layout and sizing */
     display: flex;
@@ -38,5 +37,5 @@ body {
 }
 
 #root {
-    border: 4px red dashed;
+    width: 100%;
 }

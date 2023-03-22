@@ -1,0 +1,18 @@
+.user_info {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    white-space: nowrap;
+    & > section {
+        margin: 0 15px;
+        & > span {
+            padding: 0 7px;
+            font-size: 13px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.5);
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
