@@ -4,5 +4,9 @@ import styles from './home.nav.btn.module.scss';
 type HomeNavButtonProps = PropsWithChildren<Record<never, never>>;
 
 export default function HomeNavButton(props: HomeNavButtonProps) {
-    return <div className={styles.home_nav_btn}>{props.children}</div>;
+    return (
+        <div className={styles.home_nav_btn}>
+            <span>{props.children}</span>
+        </div>
+    );
 }
