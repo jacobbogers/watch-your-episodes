@@ -1,0 +1,6 @@
+.main_section {
+    grid-area: mn;
+    display: grid;
+    grid: 'fel fel fel fel' auto
+          / 1fr 1fr 1fr 1fr;  
+}
