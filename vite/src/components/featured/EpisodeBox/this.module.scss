@@ -1,0 +1,43 @@
+.episode_box {
+    padding: 5px;
+    height: auto;
+    /* will make it 90px */
+    width: 100%;
+    cursor: pointer;
+}
+
+.episode_box_formatter {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #1d1d26;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.29);
+}
+
+.episode_box_formatter > img {
+    display: block;
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    align-self: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.detail_formatter {
+    padding-top: 14.5px;
+    padding-left: 8px;
+    padding-right: 5px;
+    color: white;
+    flex-grow: 1;
+}
+
+.text_box {
+    --line-height: 17px;
+    line-height: var(--line-height);
+    font-size: 15px;
+    font-weight: 400;
+    height: calc(var(--line-height) * 3);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

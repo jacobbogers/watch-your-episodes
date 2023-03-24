@@ -1,6 +1,33 @@
 .main_section {
+    width: 100%;
     grid-area: mn;
     display: grid;
-    grid: 'fel fel fel fel' auto
-          / 1fr 1fr 1fr 1fr;  /* repeat does not work here */ 
+    padding: 15px;
+    grid:
+        'fel fel fel fel' auto
+        / 1fr 1fr 1fr 1fr; /* repeat does not work here */
+}
+
+@media (max-width: 1300px) {
+    .main_section {
+        grid:
+            'fel fel fel' auto
+            / 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main_section {
+        grid:
+            'fel fel' auto
+            / 1fr 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .main_section {
+        grid:
+            'fel' auto
+            / 1fr;
+    }
 }

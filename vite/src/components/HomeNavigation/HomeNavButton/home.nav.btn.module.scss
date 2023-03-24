@@ -14,12 +14,15 @@
     justify-content: center;
     align-items: center;
     padding: 0.25em 0.5em;
+    cursor: pointer;
 
     flex-grow: 0;
+
     &:hover {
         opacity: 1;
         background-color: #02abea;
     }
+
     &:active {
         /*border-bottom: 4px solid #02abea;*/
         box-shadow: none;
