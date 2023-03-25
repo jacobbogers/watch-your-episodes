@@ -4,13 +4,14 @@ import { PropsWithChildren } from 'react';
 type EpisodeBoxProperties = PropsWithChildren<{
     isNew?: boolean;
     isPopular?: boolean;
+    url: string
 }>;
 
-export default function EpisodeBox({ children, isPopular, isNew }: EpisodeBoxProperties) {
+export default function EpisodeBox({ children, isPopular, isNew, url }: EpisodeBoxProperties) {
     return (
         <section className={styles.episode_box}>
             <div className={styles.episode_box_formatter}>
-                <img src={'./american-dad.jpg'} alt="american dad" />
+                <img src={url} alt={children?.toString()} />
                 {isNew && <div className={styles.new}>new</div>}
                 {isPopular && <div className={styles.popular}>popular</div>}
                 <section className={styles.detail_formatter}>

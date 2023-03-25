@@ -5,6 +5,7 @@ import Main from './components/Main';
 import HomeNavigation from './components/HomeNavigation';
 import FeaturedTitle from './components/featured/FeaturedTitle';
 import EpisodeBox from './components/featured/EpisodeBox';
+import db from './db.json';
 
 export default function App() {
     return (
@@ -12,11 +13,18 @@ export default function App() {
             <Header />
             <HomeNavigation />
             <Main>
-                <FeaturedTitle>Tuesday May 19, 2020</FeaturedTitle>
-                <EpisodeBox isPopular>
-                    American Dad!
-                    Season 17 Episode 6 s17e06
-                </EpisodeBox>
+                {
+                    Object.entries(db as Record<string, { fileName: string, title: string }[]>).map(([date, epboxes]) => {
+                        return <>
+                            <FeaturedTitle>{date}</FeaturedTitle>
+                            {
+                                epboxes.map(epbox =>
+                                    <EpisodeBox url={`./assets/${epbox.fileName}`}>{epbox.title}</EpisodeBox>)
+                            }
+                        </>;
+                    })
+
+                }
             </Main>
         </div>
     );

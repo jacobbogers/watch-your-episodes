@@ -24,10 +24,11 @@
         }
 
         &>.detail_formatter {
-            padding-top: 14.5px;
+            /*padding-top: 14.5px;*/
             padding-left: 8px;
             padding-right: 5px;
             color: white;
+            display: flex;
             flex-grow: 1;
 
             &>.text_box {
@@ -35,9 +36,10 @@
                 line-height: var(--line-height);
                 font-size: 15px;
                 font-weight: 400;
-                height: calc(var(--line-height) * 3);
+                max-height: calc(var(--line-height) * 3);
                 text-overflow: ellipsis;
-                overflow-block: clip;
+                overflow: clip;
+                align-self: center;
             }
         }
     }
