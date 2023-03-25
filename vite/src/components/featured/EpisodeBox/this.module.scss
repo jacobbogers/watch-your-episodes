@@ -4,40 +4,70 @@
     /* will make it 90px */
     width: 100%;
     cursor: pointer;
+
+    &>.episode_box_formatter {
+        display: flex;
+        height: 80px;
+        width: 100%;
+        position: relative;
+        background-color: #1d1d26;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.29);
+
+        &>img {
+            display: block;
+            width: 76px;
+            height: 76px;
+            object-fit: cover;
+            align-self: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        &>.detail_formatter {
+            padding-top: 14.5px;
+            padding-left: 8px;
+            padding-right: 5px;
+            color: white;
+            flex-grow: 1;
+
+            &>.text_box {
+                --line-height: 17px;
+                line-height: var(--line-height);
+                font-size: 15px;
+                font-weight: 400;
+                height: calc(var(--line-height) * 3);
+                text-overflow: ellipsis;
+                overflow-block: clip;
+            }
+        }
+    }
 }
 
-.episode_box_formatter {
-    display: flex;
-    height: 80px;
-    width: 100%;
-    background-color: #1d1d26;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.29);
+.new {
+    height: 12px;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    background: #e1184f;
+    box-shadow: 0 0 4px 1px #e1184f;
+    line-height: 10px;
+    color: #fff;
+    padding: 0 2px;
+    font-size: 10px;
+    border-radius: 2px;
+    /*z-index: 9;*/
 }
 
-.episode_box_formatter > img {
-    display: block;
-    width: 76px;
-    height: 76px;
-    object-fit: cover;
-    align-self: center;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
-.detail_formatter {
-    padding-top: 14.5px;
-    padding-left: 8px;
-    padding-right: 5px;
-    color: white;
-    flex-grow: 1;
-}
-
-.text_box {
-    --line-height: 17px;
-    line-height: var(--line-height);
-    font-size: 15px;
-    font-weight: 400;
-    height: calc(var(--line-height) * 3);
-    text-overflow: ellipsis;
-    overflow: hidden;
+.popular {
+    height: 12px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    line-height: 10px;
+    color: #fff;
+    padding: 0 2px;
+    font-size: 10px;
+    border-radius: 2px;
+    background-color: #01abe9;
+    box-shadow: 0 0 4px 1px #01abe9;
 }

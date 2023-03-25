@@ -13,7 +13,10 @@ export default function App() {
             <HomeNavigation />
             <Main>
                 <FeaturedTitle>Tuesday May 19, 2020</FeaturedTitle>
-                <EpisodeBox>American Dad! Season 17 Episode 6 s17e06</EpisodeBox>
+                <EpisodeBox isPopular>
+                    American Dad!
+                    Season 17 Episode 6 s17e06
+                </EpisodeBox>
             </Main>
         </div>
     );
