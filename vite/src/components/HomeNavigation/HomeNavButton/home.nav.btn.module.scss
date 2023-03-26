@@ -15,8 +15,8 @@
     align-items: center;
     padding: 0.25em 0.5em;
     cursor: pointer;
-
     flex-grow: 0;
+    text-align: center;
 
     &:hover {
         opacity: 1;
@@ -29,7 +29,7 @@
         opacity: 1;
     }
 
-    & > span > span::before {
+    &>span>span::before {
         white-space: pre;
         content: ' ';
     }
