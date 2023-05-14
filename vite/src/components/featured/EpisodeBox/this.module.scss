@@ -37,7 +37,10 @@
                 font-size: 15px;
                 font-weight: 400;
                 max-height: calc(var(--line-height) * 3);
-                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
                 overflow: clip;
                 align-self: center;
             }
